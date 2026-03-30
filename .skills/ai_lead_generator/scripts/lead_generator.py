@@ -339,26 +339,28 @@ def find_linkedin_url(session, company_name):
 def compute_relevance_score(lead, niche_keywords):
     """
     Score a lead 1-10 based on how well it matches the target niche.
+    Leads without a website start at a lower base and are filtered out
+    downstream; this score is used for ranking among qualified leads.
     """
-    score = 5  # Base score
+    # Leads with no website are untrustworthy — penalise heavily
+    if not lead.get("website"):
+        return 1
+
+    score = 5  # Base score (website confirmed present)
 
     text = f"{lead.get('company_name', '')} {lead.get('snippet', '')}".lower()
 
-    # Keyword matches
+    # Keyword matches (+1.5 each, capped at +3)
     keyword_matches = sum(1 for kw in niche_keywords if kw.lower() in text)
     score += min(keyword_matches * 1.5, 3)
-
-    # Has website = +0.5
-    if lead.get("website"):
-        score += 0.5
 
     # Has email = +1
     if lead.get("contact_email"):
         score += 1
 
-    # Has LinkedIn = +0.5
+    # Has LinkedIn = +1 (raised from 0.5 — valuable fallback contact)
     if lead.get("linkedin_url"):
-        score += 0.5
+        score += 1
 
     return min(round(score), 10)
 
@@ -418,6 +420,7 @@ def generate_leads(niche, locations, max_results, session, config):
     """
     all_leads = []
     seen_ids = set()
+    seen_domains = set()  # Global domain-level dedup across all locations
     niche_keywords = [w.strip() for w in niche.replace(",", " ").split() if len(w.strip()) > 2]
 
     location_list = [loc.strip() for loc in locations.split(",") if loc.strip()]
@@ -439,6 +442,11 @@ def generate_leads(niche, locations, max_results, session, config):
 
                 if not is_valid_lead_domain(domain):
                     continue
+
+                # Skip domains already seen in any location (global dedup)
+                if domain in seen_domains:
+                    continue
+                seen_domains.add(domain)
 
                 lead_id = generate_lead_id(result["title"], result["url"])
                 if lead_id in seen_ids:
@@ -477,13 +485,19 @@ def generate_leads(niche, locations, max_results, session, config):
                 except Exception:
                     pass
 
-                # Find LinkedIn
+                # Always find LinkedIn — it serves as the contact fallback
+                # when no email is available
                 try:
                     linkedin = find_linkedin_url(session, lead["company_name"])
                     if linkedin:
                         lead["linkedin_url"] = linkedin
                 except Exception:
                     pass
+
+                # Require at least one contact signal (email or LinkedIn)
+                if not lead["contact_email"] and not lead["linkedin_url"]:
+                    lead["relevance_score"] = 0  # Will be filtered out below
+                    continue
 
                 # Compute relevance
                 lead["relevance_score"] = compute_relevance_score(lead, niche_keywords)
@@ -493,11 +507,22 @@ def generate_leads(niche, locations, max_results, session, config):
 
                 time.sleep(1)
 
-        # Filter: only active/unverified leads with relevance >= 4
+        # Filter: verified-active companies only, must have a website,
+        # must have at least one contact signal, relevance threshold >= 6
         qualified = [
             l for l in location_leads
-            if l["relevance_score"] >= 4 and l["status"] != "inactive"
+            if l["status"] == "active"
+            and l.get("website")
+            and (l.get("contact_email") or l.get("linkedin_url"))
+            and l["relevance_score"] >= 6
         ]
+
+        # Sort within location: email first, then linkedin, then score
+        qualified.sort(key=lambda x: (
+            bool(x.get("contact_email")),
+            bool(x.get("linkedin_url")),
+            x.get("relevance_score", 0),
+        ), reverse=True)
 
         print(f"   ✅ {len(qualified)} qualified leads from {location}\n")
         all_leads.extend(qualified[:results_per_location])
@@ -726,8 +751,13 @@ def main():
         config=config,
     )
 
-    # ── Sort by relevance ──
-    leads.sort(key=lambda x: x.get("relevance_score", 0), reverse=True)
+    # ── Sort by contact completeness, then relevance ──
+    # Priority: has email > has LinkedIn > relevance score
+    leads.sort(key=lambda x: (
+        bool(x.get("contact_email")),
+        bool(x.get("linkedin_url")),
+        x.get("relevance_score", 0),
+    ), reverse=True)
 
     # ── Save output ──
     if args.output_format in ("json", "both"):
