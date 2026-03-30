@@ -1,0 +1,158 @@
+================================================================================
+  AI CLIENT ACQUISITION SYSTEM — PROMPT TEMPLATES
+  Use these prompts with Claude to run each skill in the pipeline.
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 1 — LEAD GENERATION
+Skill: ai-lead-generator
+────────────────────────────────────────────────────────────────────────────────
+
+TEMPLATE 1A — Standard (niche + location)
+------------------------------------------
+Run the `ai-lead-generator` skill with:
+- niche: "AI consulting"
+- locations: "US, UK, India"
+- max_results: 50
+- output_format: both
+- output_path: ./output/leads
+
+
+TEMPLATE 1B — Targeted city search
+------------------------------------
+Run the `ai-lead-generator` skill with:
+- niche: "machine learning consulting"
+- locations: "New York, San Francisco, Austin"
+- max_results: 30
+- output_format: json
+- output_path: ./output/leads_usa_cities
+
+
+TEMPLATE 1C — Narrow niche
+----------------------------
+Run the `ai-lead-generator` skill with:
+- niche: "IT managed services"
+- locations: "US"
+- max_results: 100
+- output_format: both
+- output_path: ./output/leads_msp
+
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 2 — COLD EMAIL GENERATION
+Skill: ai-cold-email
+────────────────────────────────────────────────────────────────────────────────
+
+TEMPLATE 2A — Free demo CTA
+-----------------------------
+Run the `ai-cold-email` skill with:
+- company_name: "[COMPANY NAME FROM LEADS]"
+- website: "[WEBSITE FROM LEADS]"
+- niche: "AI consulting"
+- sender_name: "[YOUR FIRST NAME]"
+- sender_company: "[YOUR COMPANY]"
+- offer: "AI-powered lead generation automation"
+- cta_type: "free demo"
+- output_path: ./output/cold_emails.json
+
+
+TEMPLATE 2B — Free audit CTA
+------------------------------
+Run the `ai-cold-email` skill with:
+- company_name: "[COMPANY NAME FROM LEADS]"
+- website: "[WEBSITE FROM LEADS]"
+- niche: "[LEAD'S NICHE]"
+- sender_name: "[YOUR FIRST NAME]"
+- sender_company: "[YOUR COMPANY]"
+- offer: "AI automation audit — we find where you're leaving revenue on the table"
+- cta_type: "free audit"
+- output_path: ./output/cold_emails_audit.json
+
+
+TEMPLATE 2C — Sample leads CTA
+--------------------------------
+Run the `ai-cold-email` skill with:
+- company_name: "[COMPANY NAME FROM LEADS]"
+- website: "[WEBSITE FROM LEADS]"
+- niche: "IT staffing"
+- sender_name: "[YOUR FIRST NAME]"
+- sender_company: "[YOUR COMPANY]"
+- offer: "AI-sourced lead lists for IT staffing firms"
+- cta_type: "sample leads"
+- output_path: ./output/cold_emails_sample.json
+
+
+────────────────────────────────────────────────────────────────────────────────
+STEP 3 — FOLLOW-UP (no reply after 4 days)
+Skill: ai-followup
+────────────────────────────────────────────────────────────────────────────────
+
+TEMPLATE 3A — Soft urgency follow-up
+--------------------------------------
+Run the `ai-followup` skill with:
+- lead_name: "[LEAD FIRST NAME]"
+- company_name: "[COMPANY NAME]"
+- original_email_subject: "[PASTE SUBJECT OF EMAIL YOU SENT]"
+- original_email_body: "[PASTE BODY OF EMAIL YOU SENT]"
+- days_since_first_email: 4
+- sender_name: "[YOUR FIRST NAME]"
+- offer: "AI-powered lead generation automation"
+- urgency_type: "soft"
+- output_path: ./output/followup_emails.json
+
+
+TEMPLATE 3B — Value add follow-up
+-----------------------------------
+Run the `ai-followup` skill with:
+- lead_name: "[LEAD FIRST NAME]"
+- company_name: "[COMPANY NAME]"
+- original_email_subject: "[PASTE SUBJECT]"
+- original_email_body: "[PASTE BODY]"
+- days_since_first_email: 5
+- sender_name: "[YOUR FIRST NAME]"
+- offer: "AI-powered lead generation automation"
+- urgency_type: "value"
+- output_path: ./output/followup_emails_value.json
+
+
+TEMPLATE 3C — Question follow-up
+----------------------------------
+Run the `ai-followup` skill with:
+- lead_name: "[LEAD FIRST NAME]"
+- company_name: "[COMPANY NAME]"
+- original_email_subject: "[PASTE SUBJECT]"
+- original_email_body: "[PASTE BODY]"
+- days_since_first_email: 6
+- sender_name: "[YOUR FIRST NAME]"
+- offer: "AI-powered lead generation automation"
+- urgency_type: "question"
+- output_path: ./output/followup_emails_question.json
+
+
+────────────────────────────────────────────────────────────────────────────────
+FULL PIPELINE — Run all 3 skills in sequence
+────────────────────────────────────────────────────────────────────────────────
+
+TEMPLATE P1 — Complete pipeline for one lead
+---------------------------------------------
+Step 1: Run `ai-lead-generator` with niche "AI consulting", locations "US", max_results 10, output_path ./output/leads
+
+Step 2: For the top lead from the output, run `ai-cold-email` with their company_name, website, and niche. Use sender_name "[YOUR NAME]", sender_company "[YOUR COMPANY]", cta_type "free demo".
+
+Step 3: After 4 days with no reply, run `ai-followup` using the original email subject and body from Step 2. Use urgency_type "soft".
+
+
+================================================================================
+  VARIABLE REFERENCE
+================================================================================
+
+[COMPANY NAME FROM LEADS]  →  company_name field from leads.json
+[WEBSITE FROM LEADS]        →  website field from leads.json
+[LEAD'S NICHE]              →  niche field from leads.json
+[YOUR FIRST NAME]           →  Your name (e.g., "Sarah", "James")
+[YOUR COMPANY]              →  Your company name (e.g., "LeadFlow AI")
+[LEAD FIRST NAME]           →  First name of the contact at the target company
+[PASTE SUBJECT]             →  Copy from cold_emails.json → variations[n].subject
+[PASTE BODY]                →  Copy from cold_emails.json → variations[n].body
+
+================================================================================
