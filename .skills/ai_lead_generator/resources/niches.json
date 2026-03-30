@@ -1,0 +1,72 @@
+{
+  "niches": {
+    "ai_consulting": {
+      "label": "AI Consulting",
+      "queries": [
+        "AI consulting company",
+        "artificial intelligence consulting firm",
+        "AI strategy consulting agency",
+        "machine learning consulting services",
+        "AI implementation partner"
+      ]
+    },
+    "software_agency": {
+      "label": "Software Development Agency",
+      "queries": [
+        "custom software development agency",
+        "software development company",
+        "app development agency",
+        "full-stack development firm",
+        "software engineering services"
+      ]
+    },
+    "it_services": {
+      "label": "IT Services & Managed Services",
+      "queries": [
+        "IT managed services provider",
+        "IT consulting company",
+        "IT infrastructure services",
+        "IT support and services firm",
+        "technology services company"
+      ]
+    },
+    "data_engineering": {
+      "label": "Data Engineering & Analytics",
+      "queries": [
+        "data engineering company",
+        "data analytics consulting firm",
+        "big data services provider",
+        "data pipeline development agency",
+        "business intelligence consulting"
+      ]
+    },
+    "cloud_services": {
+      "label": "Cloud Services & DevOps",
+      "queries": [
+        "cloud consulting company",
+        "cloud migration services",
+        "DevOps consulting agency",
+        "AWS consulting partner",
+        "cloud infrastructure services"
+      ]
+    },
+    "cybersecurity": {
+      "label": "Cybersecurity Services",
+      "queries": [
+        "cybersecurity consulting firm",
+        "information security services company",
+        "penetration testing company",
+        "managed security services provider",
+        "cybersecurity solutions provider"
+      ]
+    }
+  },
+  "locations": {
+    "US": ["United States", "USA", "New York", "San Francisco", "Austin", "Chicago", "Boston", "Seattle"],
+    "UK": ["United Kingdom", "London", "Manchester", "Birmingham", "Edinburgh", "Bristol"],
+    "India": ["India", "Bangalore", "Hyderabad", "Mumbai", "Pune", "Chennai", "Delhi NCR", "Gurugram"],
+    "Canada": ["Canada", "Toronto", "Vancouver", "Montreal", "Ottawa"],
+    "Germany": ["Germany", "Berlin", "Munich", "Frankfurt", "Hamburg"],
+    "Australia": ["Australia", "Sydney", "Melbourne", "Brisbane", "Perth"]
+  }
+}

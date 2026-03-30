@@ -1,0 +1,24 @@
+{
+  "lead_name": "James",
+  "company_name": "NexGen AI Solutions",
+  "days_since_first_email": 4,
+  "urgency_type": "soft",
+  "original_subject": "NexGen's lead pipeline — quick thought",
+  "generated_at": "2026-03-30T12:00:00+00:00",
+  "variations": [
+    {
+      "id": "A",
+      "angle": "urgency",
+      "subject": "Re: NexGen's lead pipeline — quick thought",
+      "body": "Hey James,\n\nSent you a note a few days ago — not sure if it got buried.\n\nOne thing worth mentioning: we're only onboarding 3 new clients this month to keep quality high. Two spots are still open.\n\nWorth a 20-minute look before they're gone?\n\n— Sarah",
+      "word_count": 51
+    },
+    {
+      "id": "B",
+      "angle": "question",
+      "subject": "Quick question for you, James",
+      "body": "Hey James,\n\nCompletely understand if the timing's off — no pressure at all.\n\nOne honest question: is lead gen actually a priority for NexGen right now, or is capacity the bigger constraint?\n\nEither way, happy to share what's working for firms like yours.\n\n— Sarah",
+      "word_count": 46
+    }
+  ]
+}

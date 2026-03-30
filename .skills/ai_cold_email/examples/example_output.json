@@ -1,0 +1,44 @@
+{
+  "company_name": "NexGen AI Solutions",
+  "website": "https://nexgenai.com",
+  "niche": "AI consulting",
+  "offer": "AI-powered lead generation automation",
+  "cta_type": "free demo",
+  "sender_name": "Sarah",
+  "sender_company": "LeadFlow AI",
+  "generated_at": "2026-03-30T12:00:00+00:00",
+  "identified_pain_points": [
+    "struggling to consistently fill their pipeline with qualified leads",
+    "spending too much time on manual outreach instead of delivering client work",
+    "losing deals to larger firms that appear more established online"
+  ],
+  "variations": [
+    {
+      "id": 1,
+      "hook_type": "pain-point",
+      "subject": "NexGen's lead pipeline — quick thought",
+      "body": "Hey [First Name],\n\nRunning an AI consulting firm is ironic in one way — you're selling automation to clients, but your own lead gen is probably still manual.\n\nI've talked to a dozen AI consultants in the past month. Almost all of them are getting 80% of new business from referrals and feeling stuck when that dries up.\n\nAt LeadFlow AI, we built a system that automatically identifies, qualifies, and delivers warm leads for consulting firms like NexGen — so you're pitching, not prospecting.\n\nWould a quick 20-minute demo make sense? No pitch, just show you the setup.\n\n— Sarah\n\nP.S. We set one client up last month — they booked 3 discovery calls in the first week.",
+      "ps": "P.S. We set one client up last month — they booked 3 discovery calls in the first week."
+    },
+    {
+      "id": 2,
+      "hook_type": "social-proof",
+      "subject": "40 leads/month for an AI consultancy",
+      "body": "Hey [First Name],\n\nA few months ago, a small AI consulting firm (2 partners, no SDR) was getting maybe 4–5 inbound inquiries a month.\n\nWe plugged in our lead automation system. Within 6 weeks they were seeing 40+ qualified leads per month — companies actively looking for AI consulting help.\n\nNo cold calls. No LinkedIn spam. Just automated, targeted outreach that actually sounds human.\n\nI think NexGen could see similar results. Mind if I show you how it works — 20 minutes, free?\n\n— Sarah\n\nP.S. Happy to share the exact breakdown of what we built for them.",
+      "ps": "P.S. Happy to share the exact breakdown of what we built for them."
+    },
+    {
+      "id": 3,
+      "hook_type": "curiosity",
+      "subject": "Where do NexGen's best clients come from?",
+      "body": "Hey [First Name],\n\nQuick question — if you had to guess, what's the #1 source of your best clients right now?\n\nFor most AI consultancies I talk to, the honest answer is \"someone I already knew\" or \"a random referral.\"\n\nThat's great until it isn't.\n\nWe built LeadFlow AI specifically so firms like NexGen don't have to rely on luck. It automates the prospecting layer — finding and warming up companies that are already looking for AI help.\n\nCurious if it'd be worth a 20-minute look?\n\n— Sarah\n\nP.S. No deck, no pitch — just the live system.",
+      "ps": "P.S. No deck, no pitch — just the live system."
+    }
+  ],
+  "follow_up": {
+    "send_after_days": 4,
+    "subject": "Re: quick thought for NexGen",
+    "body": "Hey [First Name],\n\nSent you a note a few days ago — not sure if it got buried.\n\nOne thing I forgot to mention: we only work with 3–4 new clients per month to keep quality high. Two spots are open right now.\n\nStill happy to show you the demo if the timing's right — totally understand if it's not.\n\n— Sarah\n\nP.S. Takes 20 minutes. You'd know by the end if it's a fit.",
+    "ps": "P.S. Takes 20 minutes. You'd know by the end if it's a fit."
+  }
+}

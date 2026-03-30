@@ -1,0 +1,62 @@
+[
+  {
+    "company_name": "DataRobot AI Consulting",
+    "website": "https://www.datarobot.com",
+    "contact_email": "info@datarobot.com",
+    "linkedin_url": "https://www.linkedin.com/company/datarobot",
+    "location": "US",
+    "niche": "AI consulting",
+    "relevance_score": 9,
+    "status": "active",
+    "source": "search",
+    "scraped_at": "2026-03-30T05:25:00+00:00"
+  },
+  {
+    "company_name": "Faculty AI",
+    "website": "https://faculty.ai",
+    "contact_email": "hello@faculty.ai",
+    "linkedin_url": "https://www.linkedin.com/company/faculty-ai",
+    "location": "UK",
+    "niche": "AI consulting",
+    "relevance_score": 9,
+    "status": "active",
+    "source": "search",
+    "scraped_at": "2026-03-30T05:25:00+00:00"
+  },
+  {
+    "company_name": "Fractal Analytics",
+    "website": "https://fractal.ai",
+    "contact_email": "contact@fractal.ai",
+    "linkedin_url": "https://www.linkedin.com/company/fractal-analytics",
+    "location": "India",
+    "niche": "AI consulting",
+    "relevance_score": 8,
+    "status": "active",
+    "source": "search",
+    "scraped_at": "2026-03-30T05:25:00+00:00"
+  },
+  {
+    "company_name": "Turing AI Services",
+    "website": "https://www.turing.com",
+    "contact_email": "",
+    "linkedin_url": "https://www.linkedin.com/company/turing-com",
+    "location": "US",
+    "niche": "AI consulting",
+    "relevance_score": 7,
+    "status": "active",
+    "source": "search",
+    "scraped_at": "2026-03-30T05:25:00+00:00"
+  },
+  {
+    "company_name": "Peak AI",
+    "website": "https://peak.ai",
+    "contact_email": "info@peak.ai",
+    "linkedin_url": "https://www.linkedin.com/company/peakai",
+    "location": "UK",
+    "niche": "AI consulting",
+    "relevance_score": 8,
+    "status": "active",
+    "source": "search",
+    "scraped_at": "2026-03-30T05:25:00+00:00"
+  }
+]

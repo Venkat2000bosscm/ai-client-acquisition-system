@@ -1,0 +1,31 @@
+company_name,website,contact_email,linkedin_url,location,niche,relevance_score,status,source,scraped_at
+Accenture (Applied Intelligence),https://www.accenture.com,info@accenture.com,https://www.linkedin.com/company/accenture,US,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+McKinsey & Company (QuantumBlack),https://www.mckinsey.com/capabilities/quantumblack,media_relations@mckinsey.com,https://www.linkedin.com/company/quantumblack,US,AI consulting,10,active,search,2026-03-30T05:37:00+00:00
+IBM Consulting (watsonx),https://www.ibm.com/consulting,,https://www.linkedin.com/company/ibm,US,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Cognizant,https://www.cognizant.com,inquiry@cognizant.com,https://www.linkedin.com/company/cognizant,US,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Deloitte AI Institute,https://www.deloitte.com,,https://www.linkedin.com/company/deloitte,US,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+LeewayHertz,https://www.leewayhertz.com,info@leewayhertz.com,https://www.linkedin.com/company/leewayhertz,US,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+RTS Labs,https://www.rtslabs.com,info@rtslabs.com,https://www.linkedin.com/company/rts-labs,US,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+EffectiveSoft,https://www.effectivesoft.com,info@effectivesoft.com,https://www.linkedin.com/company/effectivesoft,US,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Algoscale Technologies,https://www.algoscale.com,info@algoscale.com,https://www.linkedin.com/company/algoscale,US,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Adastra Corp,https://www.adastracorp.com,info@adastracorp.com,https://www.linkedin.com/company/adastra,US,AI consulting,7,active,search,2026-03-30T05:37:00+00:00
+DevsData LLC,https://devsdata.com,info@devsdata.com,https://www.linkedin.com/company/devsdata,US,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Scopic Software,https://scopicsoftware.com,hello@scopicsoftware.com,https://www.linkedin.com/company/scopic-software,US,AI consulting,7,active,search,2026-03-30T05:37:00+00:00
+Boston Consulting Group (BCG GAMMA),https://www.bcg.com/x/artificial-intelligence,,https://www.linkedin.com/company/boston-consulting-group,UK,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Faculty AI,https://faculty.ai,hello@faculty.ai,https://www.linkedin.com/company/faculty-ai,UK,AI consulting,10,active,search,2026-03-30T05:37:00+00:00
+Fifty One Degrees,https://51d.co,hello@51d.co,https://www.linkedin.com/company/fifty-one-degrees,UK,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Cambridge Consultants,https://www.cambridgeconsultants.com,enquiries@cambridgeconsultants.com,https://www.linkedin.com/company/cambridge-consultants,UK,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Brainpool AI,https://brainpool.ai,hello@brainpool.ai,https://www.linkedin.com/company/brainpool-ai,UK,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Deeper Insights,https://deeperinsights.com,hello@deeperinsights.com,https://www.linkedin.com/company/deeper-insights,UK,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Geeks Ltd,https://geeks.ltd,info@geeks.ltd,https://www.linkedin.com/company/geeks-ltd,UK,AI consulting,7,active,search,2026-03-30T05:37:00+00:00
+PwC UK (AI Practice),https://www.pwc.co.uk/services/data-analytics/artificial-intelligence.html,,https://www.linkedin.com/company/pwc-uk,UK,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Tata Consultancy Services (TCS),https://www.tcs.com,global.marketing@tcs.com,https://www.linkedin.com/company/tata-consultancy-services,India,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Infosys (Infosys Nia),https://www.infosys.com,askus@infosys.com,https://www.linkedin.com/company/infosys,India,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Wipro (Wipro HOLMES),https://www.wipro.com,info@wipro.com,https://www.linkedin.com/company/wipro,India,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+HCL Technologies,https://www.hcltech.com,,https://www.linkedin.com/company/hcltech,India,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+Fractal Analytics,https://fractal.ai,contact@fractal.ai,https://www.linkedin.com/company/fractal-analytics,India,AI consulting,10,active,search,2026-03-30T05:37:00+00:00
+Haptik (Conversational AI),https://www.haptik.ai,hello@haptik.ai,https://www.linkedin.com/company/haptik,India,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+DataToBiz,https://www.datatobiz.com,info@datatobiz.com,https://www.linkedin.com/company/datatobiz,India,AI consulting,9,active,search,2026-03-30T05:37:00+00:00
+Simform Solutions,https://www.simform.com,info@simform.com,https://www.linkedin.com/company/simaboram,India,AI consulting,8,active,search,2026-03-30T05:37:00+00:00
+OpenXcell,https://www.openxcell.com,info@openxcell.com,https://www.linkedin.com/company/openxcell,India,AI consulting,7,active,search,2026-03-30T05:37:00+00:00
+Ahex Technologies,https://www.ahex.com,info@ahex.com,https://www.linkedin.com/company/ahex-technologies,India,AI consulting,7,active,search,2026-03-30T05:37:00+00:00
